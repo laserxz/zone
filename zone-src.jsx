@@ -8,6 +8,7 @@
       { id: "swms", name: "SWMS App", tagline: "Safe Work Method Statements made simple", url: "https://swms.zone.net.au", icon: "\u2713", color: "#ffd60a", gradient: "linear-gradient(135deg, #ffd60a 0%, #ff9f1c 100%)", category: "Safety Tools" },
       { id: "lasermaze", name: "LaserMaze", tagline: "Interactive laser maze challenge game", url: "https://lasermaze.zone.net.au", icon: "\u2B21", color: "#ff003c", gradient: "linear-gradient(135deg, #ff003c 0%, #ff6b35 100%)", category: "Entertainment" },
       { id: "lasermpe", name: "MPE Laser Calculator", tagline: "Maximum Permissible Exposure safety calculator", url: "https://lasermpe.zone.net.au", icon: "\u26A0", color: "#00ff88", gradient: "linear-gradient(135deg, #00ff88 0%, #00b4d8 100%)", category: "Safety Tools" },
+      { id: "receipts", name: "ReceiptZone", tagline: "Snap, scan & search your receipts with OCR", url: "https://receipts.zone.net.au", icon: "🧾", color: "#00d4ff", gradient: "linear-gradient(135deg, #00d4ff 0%, #8b5cf6 100%)", category: "Utilities" },
     ];
 
     const CATEGORIES = ["All", ...Array.from(new Set(APPS.map((a) => a.category)))];

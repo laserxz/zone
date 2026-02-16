@@ -71,6 +71,16 @@ const APPS = [
     gradient: "linear-gradient(135deg, #ffd60a 0%, #ff9f1c 100%)",
     category: "Safety Tools",
   },
+  {
+    id: "receipts",
+    name: "ReceiptZone",
+    tagline: "Snap, scan & search your receipts with OCR",
+    url: "https://receipts.zone.net.au",
+    icon: "🧾",
+    color: "#00d4ff",
+    gradient: "linear-gradient(135deg, #00d4ff 0%, #8b5cf6 100%)",
+    category: "Utilities",
+  },
 ];
 
 const CATEGORIES = ["All", ...Array.from(new Set(APPS.map((a) => a.category)))];
