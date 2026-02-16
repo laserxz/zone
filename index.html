@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zone.net.au — Free Web Applications</title>
+  <meta name="description" content="A collection of free, purpose-built web apps — from laser safety tools to streaming trackers. Built in Australia, free for everyone." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Orbitron:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="react.min.js"></script>
+  <script src="react-dom.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: #060a10;
+      color: #fff;
+      font-family: 'IBM Plex Sans', sans-serif;
+      overflow-x: hidden;
+    }
+    ::selection { background: #00ff8844; color: #fff; }
+
+    @keyframes cardFadeIn {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes heroGlow {
+      0%, 100% { text-shadow: 0 0 40px rgba(0,255,136,0.3), 0 0 80px rgba(0,255,136,0.1); }
+      50% { text-shadow: 0 0 60px rgba(0,255,136,0.5), 0 0 120px rgba(0,255,136,0.2); }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .nav-link {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: all 0.25s ease;
+      border: 1px solid transparent;
+    }
+    .nav-link:hover {
+      color: #00ff88;
+      border-color: rgba(0,255,136,0.15);
+      background: rgba(0,255,136,0.05);
+    }
+    textarea:focus, select:focus {
+      outline: none;
+      border-color: #00ff88 !important;
+      box-shadow: 0 0 0 3px rgba(0,255,136,0.1);
+    }
+
+    @media (max-width: 1024px) {
+      .app-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    }
+    @media (max-width: 768px) {
+      .app-grid { grid-template-columns: 1fr !important; }
+      .hero-title { font-size: 40px !important; }
+      .nav-inner { gap: 8px !important; }
+      .donate-buttons { flex-direction: column !important; align-items: stretch !important; }
+      .donate-buttons a { text-align: center; justify-content: center; }
+      .about-grid { grid-template-columns: 1fr !important; }
+      .feedback-paths { grid-template-columns: 1fr !important; }
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="zone-compiled.js"></script>
+</body>
+</html>
