@@ -75,6 +75,15 @@ const APPS = [{
   color: "#00d4ff",
   gradient: "linear-gradient(135deg, #00d4ff 0%, #8b5cf6 100%)",
   category: "Utilities"
+}, {
+  id: "showco",
+  name: "ShowCo",
+  tagline: "Laser show management \u2014 cues, crew, gear & runsheets",
+  url: "https://showco.zone.net.au",
+  icon: "\uD83C\uDF9B\uFE0F",
+  color: "#e040fb",
+  gradient: "linear-gradient(135deg, #e040fb 0%, #7c4dff 100%)",
+  category: "Show Management"
 }];
 const CATEGORIES = ["All", ...Array.from(new Set(APPS.map(a => a.category)))];
 function ParticleField() {
