@@ -9,6 +9,8 @@
       { id: "lasermaze", name: "LaserMaze", tagline: "Interactive laser maze challenge game", url: "https://lasermaze.zone.net.au", icon: "\u2B21", color: "#ff003c", gradient: "linear-gradient(135deg, #ff003c 0%, #ff6b35 100%)", category: "Entertainment" },
       { id: "lasermpe", name: "MPE Laser Calculator", tagline: "Maximum Permissible Exposure safety calculator", url: "https://lasermpe.zone.net.au", icon: "\u26A0", color: "#00ff88", gradient: "linear-gradient(135deg, #00ff88 0%, #00b4d8 100%)", category: "Safety Tools" },
       { id: "receipts", name: "ReceiptZone", tagline: "Snap, scan & search your receipts with OCR", url: "https://receipts.zone.net.au", icon: "🧾", color: "#00d4ff", gradient: "linear-gradient(135deg, #00d4ff 0%, #8b5cf6 100%)", category: "Utilities" },
+      { id: "showco", name: "ShowCo", tagline: "Laser show management \u2014 cues, crew, gear & runsheets", url: "https://showco.zone.net.au", icon: "\uD83C\uDF9B\uFE0F", color: "#e040fb", gradient: "linear-gradient(135deg, #e040fb 0%, #7c4dff 100%)", category: "Show Management" },
+      { id: "conductor", name: "Conductor", tagline: "Hand tracking + live MIDI control for laser shows", url: "https://conductor.zone.net.au", icon: "\uD83E\uDD4C", color: "#7c4dff", gradient: "linear-gradient(135deg, #7c4dff 0%, #448aff 100%)", category: "Show Management" },
     ];
 
     const CATEGORIES = ["All", ...Array.from(new Set(APPS.map((a) => a.category)))];

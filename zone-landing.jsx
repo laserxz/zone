@@ -91,6 +91,16 @@ const APPS = [
     gradient: "linear-gradient(135deg, #e040fb 0%, #7c4dff 100%)",
     category: "Show Management",
   },
+  {
+    id: "conductor",
+    name: "Conductor",
+    tagline: "Hand tracking + live MIDI control for laser shows",
+    url: "https://conductor.zone.net.au",
+    icon: "🥌",
+    color: "#7c4dff",
+    gradient: "linear-gradient(135deg, #7c4dff 0%, #448aff 100%)",
+    category: "Show Management",
+  },
 ];
 
 const CATEGORIES = ["All", ...Array.from(new Set(APPS.map((a) => a.category)))];
