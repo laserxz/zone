@@ -9,7 +9,7 @@
 
 ## File Structure
 - `index.html` — main page, loads React from CDN scripts and zone-compiled.js
-- `zone-src.jsx` — React JSX source (app cards, hero, layout)
+- `zone-src.jsx` — React JSX source (app cards, nav, tabbed panel, layout)
 - `zone-landing.jsx` — alternate/older JSX source
 - `zone-compiled.js` — Babel-compiled output loaded by index.html
 - `zone-compiled-new.js` — alternate compiled version
@@ -33,6 +33,15 @@ If JSX changed: `npx babel zone-src.jsx --presets @babel/preset-react -o zone-co
 - Lists app cards with links to each subdomain
 - Nginx redirects www.zone.net.au → zone.net.au
 - No auth, no API, no database
+
+## Architecture
+- No hero section — compact nav bar with inline tagline
+- About / Feedback / Donate merged into a single TabbedPanel component below the app grid
+- App grid uses auto-fill minmax(175px, 1fr) for responsive layout
+- 4 categories: Laser Show Tools, Utilities, Entertainment, Finance
+- Cross-listing via `crossCategory` array on apps (ShowCo → Finance, Mortgage → Finance)
+- Category filter pills have per-category accent colours (defined in CATEGORY_CONFIG)
+- 12 apps total: ShowCo, MPE Calculator, LaserMaze, SWMS, Conductor, LaserFace, BPM Detector, ReceiptZone, PWS Weather, Mortgage Calculator, Watch Tracker, PopUp Cards
 
 ## Current State
 - Fully functional landing page
