@@ -4,6 +4,61 @@ const {
   useRef
 } = React;
 const APPS = [{
+  id: "showco",
+  name: "ShowCo",
+  tagline: "Laser show management \u2014 cues, crew, gear & runsheets",
+  url: "https://showco.zone.net.au",
+  icon: "\uD83C\uDF9B\uFE0F",
+  color: "#e040fb",
+  gradient: "linear-gradient(135deg, #e040fb 0%, #7c4dff 100%)",
+  category: "Laser Show Tools",
+  crossCategory: ["Finance"]
+}, {
+  id: "lasermpe",
+  name: "MPE Calculator",
+  tagline: "Maximum Permissible Exposure safety calculator",
+  url: "https://lasermpe.zone.net.au",
+  icon: "\u26A0",
+  color: "#00ff88",
+  gradient: "linear-gradient(135deg, #00ff88 0%, #00b4d8 100%)",
+  category: "Laser Show Tools"
+}, {
+  id: "lasermaze",
+  name: "LaserMaze",
+  tagline: "Interactive laser maze challenge game",
+  url: "https://lasermaze.zone.net.au",
+  icon: "\u2B21",
+  color: "#ff003c",
+  gradient: "linear-gradient(135deg, #ff003c 0%, #ff6b35 100%)",
+  category: "Laser Show Tools"
+}, {
+  id: "swms",
+  name: "SWMS",
+  tagline: "Safe Work Method Statements made simple",
+  url: "https://swms.zone.net.au",
+  icon: "\u2713",
+  color: "#ffd60a",
+  gradient: "linear-gradient(135deg, #ffd60a 0%, #ff9f1c 100%)",
+  category: "Laser Show Tools"
+}, {
+  id: "conductor",
+  name: "Conductor",
+  tagline: "Hand tracking + live MIDI control for laser shows",
+  url: "https://conductor.zone.net.au",
+  icon: "\uD83E\uDD4C",
+  color: "#7c4dff",
+  gradient: "linear-gradient(135deg, #7c4dff 0%, #448aff 100%)",
+  category: "Laser Show Tools"
+}, {
+  id: "laserface",
+  name: "LaserFace",
+  tagline: "Face tracking \u2192 OSC for laser software",
+  url: "https://laserface.zone.net.au",
+  icon: "\uD83C\uDFAD",
+  color: "#ff375f",
+  gradient: "linear-gradient(135deg, #ff375f 0%, #bf5af2 100%)",
+  category: "Laser Show Tools"
+}, {
   id: "bpm",
   name: "BPM Detector",
   tagline: "Detect tempo from audio files with waveform analysis",
@@ -11,7 +66,16 @@ const APPS = [{
   icon: "\u266B",
   color: "#bf5af2",
   gradient: "linear-gradient(135deg, #bf5af2 0%, #ff375f 100%)",
-  category: "Audio Tools"
+  category: "Laser Show Tools"
+}, {
+  id: "receipts",
+  name: "ReceiptZone",
+  tagline: "Snap, scan & search your receipts with OCR",
+  url: "https://receipts.zone.net.au",
+  icon: "\uD83E\uDDFE",
+  color: "#00d4ff",
+  gradient: "linear-gradient(135deg, #00d4ff 0%, #8b5cf6 100%)",
+  category: "Utilities"
 }, {
   id: "pws",
   name: "PWS Weather",
@@ -22,6 +86,16 @@ const APPS = [{
   gradient: "linear-gradient(135deg, #00b4d8 0%, #0077b6 100%)",
   category: "Utilities"
 }, {
+  id: "mortgage",
+  name: "Mortgage Calculator",
+  tagline: "Australian mortgage repayment & comparison tool",
+  url: "https://mortgagecalc.zone.net.au",
+  icon: "\u2302",
+  color: "#2ec4b6",
+  gradient: "linear-gradient(135deg, #2ec4b6 0%, #00ff88 100%)",
+  category: "Utilities",
+  crossCategory: ["Finance"]
+}, {
   id: "watch",
   name: "Watch Tracker",
   tagline: "Track what you've watched across streaming platforms",
@@ -31,70 +105,23 @@ const APPS = [{
   gradient: "linear-gradient(135deg, #ff9f1c 0%, #ff003c 100%)",
   category: "Entertainment"
 }, {
-  id: "mortgage",
-  name: "Mortgage Calculator",
-  tagline: "Australian mortgage repayment & comparison tool",
-  url: "https://mortgagecalc.zone.net.au",
-  icon: "\u2302",
-  color: "#2ec4b6",
-  gradient: "linear-gradient(135deg, #2ec4b6 0%, #00ff88 100%)",
-  category: "Finance"
-}, {
-  id: "swms",
-  name: "SWMS App",
-  tagline: "Safe Work Method Statements made simple",
-  url: "https://swms.zone.net.au",
-  icon: "\u2713",
-  color: "#ffd60a",
-  gradient: "linear-gradient(135deg, #ffd60a 0%, #ff9f1c 100%)",
-  category: "Safety Tools"
-}, {
-  id: "lasermaze",
-  name: "LaserMaze",
-  tagline: "Interactive laser maze challenge game",
-  url: "https://lasermaze.zone.net.au",
-  icon: "\u2B21",
-  color: "#ff003c",
-  gradient: "linear-gradient(135deg, #ff003c 0%, #ff6b35 100%)",
+  id: "popupcards",
+  name: "PopUp Cards",
+  tagline: "Design laser-cut pop-up cards in browser",
+  url: "https://popupcards.zone.net.au",
+  icon: "\u2702",
+  color: "#ff6b9d",
+  gradient: "linear-gradient(135deg, #ff6b9d 0%, #c44569 100%)",
   category: "Entertainment"
-}, {
-  id: "lasermpe",
-  name: "MPE Laser Calculator",
-  tagline: "Maximum Permissible Exposure safety calculator",
-  url: "https://lasermpe.zone.net.au",
-  icon: "\u26A0",
-  color: "#00ff88",
-  gradient: "linear-gradient(135deg, #00ff88 0%, #00b4d8 100%)",
-  category: "Safety Tools"
-}, {
-  id: "receipts",
-  name: "ReceiptZone",
-  tagline: "Snap, scan & search your receipts with OCR",
-  url: "https://receipts.zone.net.au",
-  icon: "🧾",
-  color: "#00d4ff",
-  gradient: "linear-gradient(135deg, #00d4ff 0%, #8b5cf6 100%)",
-  category: "Utilities"
-}, {
-  id: "showco",
-  name: "ShowCo",
-  tagline: "Laser show management \u2014 cues, crew, gear & runsheets",
-  url: "https://showco.zone.net.au",
-  icon: "\uD83C\uDF9B\uFE0F",
-  color: "#e040fb",
-  gradient: "linear-gradient(135deg, #e040fb 0%, #7c4dff 100%)",
-  category: "Show Management"
-}, {
-  id: "conductor",
-  name: "Conductor",
-  tagline: "Hand tracking + live MIDI control for laser shows",
-  url: "https://conductor.zone.net.au",
-  icon: "\uD83E\uDD4C",
-  color: "#7c4dff",
-  gradient: "linear-gradient(135deg, #7c4dff 0%, #448aff 100%)",
-  category: "Show Management"
 }];
-const CATEGORIES = ["All", ...Array.from(new Set(APPS.map(a => a.category)))];
+const CATEGORY_CONFIG = {
+  "All": "#00ff88",
+  "Laser Show Tools": "#bf5af2",
+  "Utilities": "#00b4d8",
+  "Entertainment": "#ff9f1c",
+  "Finance": "#2ec4b6"
+};
+const CATEGORIES = Object.keys(CATEGORY_CONFIG);
 function ParticleField() {
   const canvasRef = useRef(null);
   const particles = useRef([]);
@@ -237,7 +264,7 @@ function AppCard({
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
-      height: 75,
+      height: 60,
       background: app.gradient,
       position: "relative",
       display: "flex",
@@ -255,7 +282,7 @@ function AppCard({
     }
   }), /*#__PURE__*/React.createElement("span", {
     style: {
-      fontSize: 36,
+      fontSize: 32,
       filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.4))",
       position: "relative",
       zIndex: 2,
@@ -265,13 +292,13 @@ function AppCard({
   }, app.icon), /*#__PURE__*/React.createElement("div", {
     style: {
       position: "absolute",
-      top: 8,
-      right: 8,
+      top: 6,
+      right: 6,
       background: "rgba(0,0,0,0.55)",
       backdropFilter: "blur(10px)",
-      padding: "3px 8px",
+      padding: "2px 7px",
       borderRadius: 20,
-      fontSize: 10,
+      fontSize: 9,
       fontFamily: "'JetBrains Mono', monospace",
       letterSpacing: "0.05em",
       color: "rgba(255,255,255,0.7)",
@@ -279,19 +306,19 @@ function AppCard({
     }
   }, app.category)), /*#__PURE__*/React.createElement("div", {
     style: {
-      padding: "12px 14px 14px"
+      padding: "10px 12px 12px"
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
-      marginBottom: 4
+      marginBottom: 3
     }
   }, /*#__PURE__*/React.createElement("h3", {
     style: {
       margin: 0,
-      fontSize: 15,
+      fontSize: 14,
       fontFamily: "'Orbitron', sans-serif",
       fontWeight: 700,
       color: "#fff",
@@ -307,19 +334,19 @@ function AppCard({
   }, "\u2192")), /*#__PURE__*/React.createElement("p", {
     style: {
       margin: 0,
-      fontSize: 12,
+      fontSize: 11,
       lineHeight: 1.4,
       color: "rgba(255,255,255,0.5)",
       fontFamily: "'IBM Plex Sans', sans-serif"
     }
   }, app.tagline), /*#__PURE__*/React.createElement("div", {
     style: {
-      marginTop: 8,
-      padding: "4px 8px",
+      marginTop: 6,
+      padding: "3px 7px",
       background: "rgba(255,255,255,0.03)",
       borderRadius: 6,
       border: "1px solid rgba(255,255,255,0.04)",
-      fontSize: 10,
+      fontSize: 9,
       fontFamily: "'JetBrains Mono', monospace",
       color: app.color,
       opacity: 0.7,
@@ -378,38 +405,6 @@ function PayPalDonate() {
     }
   }));
 }
-function SectionTitle({
-  children,
-  sub
-}) {
-  return /*#__PURE__*/React.createElement("div", {
-    style: {
-      textAlign: "center",
-      marginBottom: 28
-    }
-  }, /*#__PURE__*/React.createElement("h2", {
-    style: {
-      fontFamily: "'Orbitron', sans-serif",
-      fontSize: "clamp(20px, 3vw, 28px)",
-      fontWeight: 800,
-      color: "#fff",
-      margin: "0 0 8px",
-      letterSpacing: "0.04em",
-      lineHeight: 1.2
-    }
-  }, children), sub && /*#__PURE__*/React.createElement("p", {
-    style: {
-      fontFamily: "'IBM Plex Sans', sans-serif",
-      fontSize: 14,
-      color: "rgba(255,255,255,0.45)",
-      margin: 0,
-      maxWidth: 560,
-      marginLeft: "auto",
-      marginRight: "auto",
-      lineHeight: 1.5
-    }
-  }, sub));
-}
 function CategoryFilter({
   active,
   onChange
@@ -422,253 +417,69 @@ function CategoryFilter({
       justifyContent: "center",
       marginBottom: 24
     }
-  }, CATEGORIES.map(cat => /*#__PURE__*/React.createElement("button", {
-    key: cat,
-    onClick: () => onChange(cat),
+  }, CATEGORIES.map(cat => {
+    const accent = CATEGORY_CONFIG[cat];
+    return /*#__PURE__*/React.createElement("button", {
+      key: cat,
+      onClick: () => onChange(cat),
+      style: {
+        padding: "8px 18px",
+        borderRadius: 30,
+        border: active === cat ? `1px solid ${accent}` : "1px solid rgba(255,255,255,0.1)",
+        background: active === cat ? `${accent}1f` : "rgba(255,255,255,0.03)",
+        color: active === cat ? accent : "rgba(255,255,255,0.5)",
+        fontFamily: "'JetBrains Mono', monospace",
+        fontSize: 12,
+        letterSpacing: "0.06em",
+        textTransform: "uppercase",
+        cursor: "pointer",
+        transition: "all 0.25s ease"
+      }
+    }, cat);
+  }));
+}
+function TabbedPanel({
+  feedbackText,
+  setFeedbackText,
+  feedbackApp,
+  setFeedbackApp,
+  feedbackSent,
+  handleFeedbackSubmit
+}) {
+  const [tab, setTab] = useState("about");
+  const tabs = ["about", "feedback", "donate"];
+  return /*#__PURE__*/React.createElement("div", {
     style: {
-      padding: "8px 18px",
-      borderRadius: 30,
-      border: active === cat ? "1px solid #00ff88" : "1px solid rgba(255,255,255,0.1)",
-      background: active === cat ? "rgba(0,255,136,0.12)" : "rgba(255,255,255,0.03)",
-      color: active === cat ? "#00ff88" : "rgba(255,255,255,0.5)",
-      fontFamily: "'JetBrains Mono', monospace",
-      fontSize: 12,
-      letterSpacing: "0.06em",
+      maxWidth: 900,
+      margin: "0 auto",
+      padding: "24px 24px 60px"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      gap: 0,
+      justifyContent: "center",
+      marginBottom: 20,
+      borderBottom: "1px solid rgba(255,255,255,0.08)"
+    }
+  }, tabs.map(t => /*#__PURE__*/React.createElement("button", {
+    key: t,
+    onClick: () => setTab(t),
+    style: {
+      padding: "10px 28px",
+      background: "none",
+      border: "none",
+      borderBottom: tab === t ? "2px solid #00ff88" : "2px solid transparent",
+      color: tab === t ? "#00ff88" : "rgba(255,255,255,0.4)",
+      fontFamily: "'Orbitron', sans-serif",
+      fontSize: 13,
+      fontWeight: 700,
+      letterSpacing: "0.08em",
       textTransform: "uppercase",
       cursor: "pointer",
       transition: "all 0.25s ease"
     }
-  }, cat)));
-}
-function ZoneLanding() {
-  const [category, setCategory] = useState("All");
-  const [scrollY, setScrollY] = useState(0);
-  const [feedbackText, setFeedbackText] = useState("");
-  const [feedbackApp, setFeedbackApp] = useState("");
-  const [feedbackSent, setFeedbackSent] = useState(false);
-  useEffect(() => {
-    const onScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("scroll", onScroll, {
-      passive: true
-    });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-  const filtered = category === "All" ? APPS : APPS.filter(a => a.category === category);
-  const handleFeedbackSubmit = () => {
-    if (!feedbackText.trim()) return;
-    setFeedbackSent(true);
-    setTimeout(() => {
-      setFeedbackText("");
-      setFeedbackApp("");
-      setFeedbackSent(false);
-    }, 3000);
-  };
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(ParticleField, null), /*#__PURE__*/React.createElement(ScanLines, null), /*#__PURE__*/React.createElement("nav", {
-    style: {
-      position: "fixed",
-      top: 0,
-      left: 0,
-      right: 0,
-      zIndex: 100,
-      padding: "0 24px",
-      transition: "all 0.3s ease",
-      background: scrollY > 50 ? "rgba(6,10,16,0.9)" : "transparent",
-      backdropFilter: scrollY > 50 ? "blur(20px)" : "none",
-      borderBottom: scrollY > 50 ? "1px solid rgba(255,255,255,0.05)" : "1px solid transparent"
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "nav-inner",
-    style: {
-      maxWidth: 1200,
-      margin: "0 auto",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "space-between",
-      height: 64,
-      gap: 16
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontFamily: "'Orbitron', sans-serif",
-      fontWeight: 800,
-      fontSize: 18,
-      color: "#00ff88",
-      letterSpacing: "0.06em",
-      display: "flex",
-      alignItems: "center",
-      gap: 8
-    }
-  }, /*#__PURE__*/React.createElement("span", {
-    style: {
-      display: "inline-block",
-      width: 8,
-      height: 8,
-      borderRadius: "50%",
-      background: "#00ff88",
-      boxShadow: "0 0 12px #00ff88",
-      animation: "pulse 2s ease infinite"
-    }
-  }), "ZONE.NET.AU"), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: "flex",
-      gap: 4,
-      flexWrap: "wrap"
-    }
-  }, ["apps", "about", "feedback", "donate"].map(id => /*#__PURE__*/React.createElement("button", {
-    key: id,
-    onClick: () => document.getElementById(id)?.scrollIntoView({
-      behavior: "smooth"
-    }),
-    className: "nav-link",
-    style: {
-      background: "none",
-      cursor: "pointer"
-    }
-  }, id))))), /*#__PURE__*/React.createElement("div", {
-    style: {
-      position: "relative",
-      zIndex: 2
-    }
-  }, /*#__PURE__*/React.createElement("section", {
-    style: {
-      minHeight: "auto",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
-      padding: "84px 24px 24px",
-      textAlign: "center",
-      position: "relative"
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      position: "absolute",
-      top: "20%",
-      left: "50%",
-      transform: "translate(-50%, -50%)",
-      width: 500,
-      height: 500,
-      borderRadius: "50%",
-      background: "radial-gradient(circle, rgba(0,255,136,0.06) 0%, transparent 70%)",
-      pointerEvents: "none"
-    }
-  }), /*#__PURE__*/React.createElement("div", {
-    style: {
-      animation: "slideUp 0.8s ease",
-      marginBottom: 16
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontFamily: "'JetBrains Mono', monospace",
-      fontSize: 11,
-      color: "#00ff88",
-      letterSpacing: "0.25em",
-      textTransform: "uppercase",
-      marginBottom: 14,
-      display: "flex",
-      alignItems: "center",
-      gap: 10,
-      justifyContent: "center"
-    }
-  }, /*#__PURE__*/React.createElement("span", {
-    style: {
-      display: "inline-block",
-      width: 30,
-      height: 1,
-      background: "linear-gradient(90deg, transparent, #00ff88)"
-    }
-  }), "Free Web Applications", /*#__PURE__*/React.createElement("span", {
-    style: {
-      display: "inline-block",
-      width: 30,
-      height: 1,
-      background: "linear-gradient(90deg, #00ff88, transparent)"
-    }
-  })), /*#__PURE__*/React.createElement("h1", {
-    className: "hero-title",
-    style: {
-      fontFamily: "'Orbitron', sans-serif",
-      fontSize: "clamp(40px, 8vw, 72px)",
-      fontWeight: 900,
-      letterSpacing: "0.04em",
-      lineHeight: 1,
-      margin: "0 0 8px",
-      animation: "heroGlow 4s ease infinite",
-      background: "linear-gradient(135deg, #ffffff 0%, #00ff88 50%, #00b4d8 100%)",
-      WebkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent",
-      backgroundClip: "text"
-    }
-  }, "ZONE"), /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontFamily: "'Orbitron', sans-serif",
-      fontSize: "clamp(12px, 2vw, 18px)",
-      fontWeight: 400,
-      letterSpacing: "0.35em",
-      color: "rgba(255,255,255,0.35)",
-      textTransform: "uppercase"
-    }
-  }, ".net.au")), /*#__PURE__*/React.createElement("p", {
-    style: {
-      animation: "slideUp 0.8s ease 0.2s both",
-      fontFamily: "'IBM Plex Sans', sans-serif",
-      fontSize: "clamp(14px, 1.8vw, 17px)",
-      fontWeight: 300,
-      color: "rgba(255,255,255,0.5)",
-      maxWidth: 550,
-      lineHeight: 1.6,
-      marginBottom: 20
-    }
-  }, "Free, purpose-built web apps \u2014 from laser safety tools to streaming trackers. Built in Australia, free for everyone."), /*#__PURE__*/React.createElement("button", {
-    onClick: () => document.getElementById("apps")?.scrollIntoView({
-      behavior: "smooth"
-    }),
-    style: {
-      animation: "slideUp 0.8s ease 0.4s both",
-      display: "inline-flex",
-      alignItems: "center",
-      gap: 8,
-      padding: "10px 24px",
-      borderRadius: 50,
-      background: "rgba(0,255,136,0.1)",
-      border: "1px solid rgba(0,255,136,0.3)",
-      color: "#00ff88",
-      fontFamily: "'JetBrains Mono', monospace",
-      fontSize: 12,
-      letterSpacing: "0.08em",
-      textTransform: "uppercase",
-      cursor: "pointer",
-      transition: "all 0.3s ease"
-    }
-  }, "Explore Apps \u2193")), /*#__PURE__*/React.createElement("section", {
-    id: "apps",
-    style: {
-      maxWidth: 1200,
-      margin: "0 auto",
-      padding: "24px 24px 60px"
-    }
-  }, /*#__PURE__*/React.createElement(CategoryFilter, {
-    active: category,
-    onChange: setCategory
-  }), /*#__PURE__*/React.createElement("div", {
-    className: "app-grid",
-    style: {
-      display: "grid",
-      gridTemplateColumns: "repeat(4, 1fr)",
-      gap: 16
-    }
-  }, filtered.map((app, i) => /*#__PURE__*/React.createElement(AppCard, {
-    key: app.id,
-    app: app,
-    index: i
-  })))), /*#__PURE__*/React.createElement("section", {
-    id: "about",
-    style: {
-      maxWidth: 900,
-      margin: "0 auto",
-      padding: "48px 24px 60px"
-    }
-  }, /*#__PURE__*/React.createElement(SectionTitle, null, "What is Zone?"), /*#__PURE__*/React.createElement("div", {
+  }, t))), tab === "about" && /*#__PURE__*/React.createElement("div", {
     className: "about-grid",
     style: {
       display: "grid",
@@ -722,22 +533,16 @@ function ZoneLanding() {
       color: "rgba(255,255,255,0.45)",
       fontFamily: "'IBM Plex Sans', sans-serif"
     }
-  }, item.desc))))), /*#__PURE__*/React.createElement("section", {
-    id: "feedback",
+  }, item.desc)))), tab === "feedback" && /*#__PURE__*/React.createElement("div", {
     style: {
       maxWidth: 700,
       margin: "0 auto",
-      padding: "48px 24px 60px"
-    }
-  }, /*#__PURE__*/React.createElement(SectionTitle, {
-    sub: "Love an app? Tell your friends. Something not quite right? Tell us."
-  }, "Feedback"), /*#__PURE__*/React.createElement("div", {
-    style: {
-      padding: 28,
+      padding: "0",
       borderRadius: 16,
       background: "rgba(10,14,20,0.7)",
       border: "1px solid rgba(255,255,255,0.06)",
-      backdropFilter: "blur(20px)"
+      backdropFilter: "blur(20px)",
+      overflow: "hidden"
     }
   }, /*#__PURE__*/React.createElement("div", {
     className: "feedback-paths",
@@ -745,7 +550,7 @@ function ZoneLanding() {
       display: "grid",
       gridTemplateColumns: "1fr 1fr",
       gap: 12,
-      marginBottom: 24
+      padding: "24px 24px 0"
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
@@ -803,7 +608,11 @@ function ZoneLanding() {
       color: "rgba(255,255,255,0.45)",
       lineHeight: 1.4
     }
-  }, "Tell us below!"))), feedbackSent ? /*#__PURE__*/React.createElement("div", {
+  }, "Tell us below!"))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: 24
+    }
+  }, feedbackSent ? /*#__PURE__*/React.createElement("div", {
     style: {
       textAlign: "center",
       padding: 40,
@@ -878,16 +687,7 @@ function ZoneLanding() {
       cursor: feedbackText.trim() ? "pointer" : "not-allowed",
       transition: "all 0.3s ease"
     }
-  }, "SEND FEEDBACK")))), /*#__PURE__*/React.createElement("section", {
-    id: "donate",
-    style: {
-      maxWidth: 900,
-      margin: "0 auto",
-      padding: "48px 24px 60px"
-    }
-  }, /*#__PURE__*/React.createElement(SectionTitle, {
-    sub: "All apps are free, but if you'd like to support the project, donations are appreciated."
-  }, "Support Zone"), /*#__PURE__*/React.createElement("div", {
+  }, "SEND FEEDBACK")))), tab === "donate" && /*#__PURE__*/React.createElement("div", {
     style: {
       padding: 32,
       borderRadius: 16,
@@ -950,7 +750,157 @@ function ZoneLanding() {
       fontFamily: "'JetBrains Mono', monospace",
       letterSpacing: "0.05em"
     }
-  }, "Securely processed via PayPal"))), /*#__PURE__*/React.createElement("footer", {
+  }, "Securely processed via PayPal")));
+}
+function ZoneLanding() {
+  const [category, setCategory] = useState("All");
+  const [scrollY, setScrollY] = useState(0);
+  const [feedbackText, setFeedbackText] = useState("");
+  const [feedbackApp, setFeedbackApp] = useState("");
+  const [feedbackSent, setFeedbackSent] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", onScroll, {
+      passive: true
+    });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+  const filtered = category === "All" ? APPS : APPS.filter(a => a.category === category || a.crossCategory && a.crossCategory.includes(category));
+  const handleFeedbackSubmit = () => {
+    if (!feedbackText.trim()) return;
+    setFeedbackSent(true);
+    setTimeout(() => {
+      setFeedbackText("");
+      setFeedbackApp("");
+      setFeedbackSent(false);
+    }, 3000);
+  };
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(ParticleField, null), /*#__PURE__*/React.createElement(ScanLines, null), /*#__PURE__*/React.createElement("nav", {
+    style: {
+      position: "fixed",
+      top: 0,
+      left: 0,
+      right: 0,
+      zIndex: 100,
+      padding: "0 24px",
+      transition: "all 0.3s ease",
+      background: scrollY > 50 ? "rgba(6,10,16,0.9)" : "rgba(6,10,16,0.7)",
+      backdropFilter: "blur(20px)",
+      borderBottom: "1px solid rgba(255,255,255,0.05)"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "nav-inner",
+    style: {
+      maxWidth: 1200,
+      margin: "0 auto",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      height: 52,
+      gap: 16
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: 10,
+      minWidth: 0
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      display: "inline-block",
+      width: 8,
+      height: 8,
+      borderRadius: "50%",
+      background: "#00ff88",
+      boxShadow: "0 0 12px #00ff88",
+      animation: "pulse 2s ease infinite",
+      flexShrink: 0
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "'Orbitron', sans-serif",
+      fontWeight: 800,
+      fontSize: 16,
+      color: "#00ff88",
+      letterSpacing: "0.06em",
+      whiteSpace: "nowrap"
+    }
+  }, "ZONE.NET.AU"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "'IBM Plex Sans', sans-serif",
+      fontSize: 12,
+      color: "rgba(255,255,255,0.35)",
+      whiteSpace: "nowrap",
+      display: "flex",
+      alignItems: "center",
+      gap: 8
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: "rgba(255,255,255,0.15)"
+    }
+  }, "\u2014"), "Free web apps, built in Australia")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      gap: 4,
+      flexWrap: "wrap",
+      flexShrink: 0
+    }
+  }, ["apps", "about", "feedback", "donate"].map(id => /*#__PURE__*/React.createElement("button", {
+    key: id,
+    onClick: () => {
+      if (id === "about" || id === "feedback" || id === "donate") {
+        document.getElementById("info-panel")?.scrollIntoView({
+          behavior: "smooth"
+        });
+      } else {
+        document.getElementById(id)?.scrollIntoView({
+          behavior: "smooth"
+        });
+      }
+    },
+    className: "nav-link",
+    style: {
+      background: "none",
+      cursor: "pointer"
+    }
+  }, id))))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: "relative",
+      zIndex: 2
+    }
+  }, /*#__PURE__*/React.createElement("section", {
+    id: "apps",
+    style: {
+      maxWidth: 1200,
+      margin: "0 auto",
+      padding: "72px 24px 40px"
+    }
+  }, /*#__PURE__*/React.createElement(CategoryFilter, {
+    active: category,
+    onChange: setCategory
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "app-grid",
+    style: {
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fill, minmax(175px, 1fr))",
+      gap: 16
+    }
+  }, filtered.map((app, i) => /*#__PURE__*/React.createElement(AppCard, {
+    key: app.id,
+    app: app,
+    index: i
+  })))), /*#__PURE__*/React.createElement("section", {
+    id: "info-panel"
+  }, /*#__PURE__*/React.createElement(TabbedPanel, {
+    feedbackText: feedbackText,
+    setFeedbackText: setFeedbackText,
+    feedbackApp: feedbackApp,
+    setFeedbackApp: setFeedbackApp,
+    feedbackSent: feedbackSent,
+    handleFeedbackSubmit: handleFeedbackSubmit
+  })), /*#__PURE__*/React.createElement("footer", {
     style: {
       borderTop: "1px solid rgba(255,255,255,0.05)",
       padding: "28px 24px",
